@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.full-screen-page{
+    width: 100vw;
+    height: calc(100vh - 277.39584678px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
