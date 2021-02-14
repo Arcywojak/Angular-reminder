@@ -22,7 +22,7 @@ input[type="text"] {
 
 .full-screen-page{
     width: 100vw;
-    height: calc(100vh - 277.39584678px);
+    min-height: calc(100vh - 277.39584678px);
     display: flex;
     align-items: center;
     justify-content: center;

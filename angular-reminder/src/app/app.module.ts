@@ -18,6 +18,9 @@ import { TutorialsPageComponent } from './pages/tutorials-page/tutorials-page.co
 import { CreateTutorialComponent } from './pages/tutorials-page/components/create-tutorial/create-tutorial.component';
 import { ReadTutorialComponent } from './pages/tutorials-page/components/read-tutorial/read-tutorial.component';
 import { SharedModule } from './shared/shared.module';
+import { DataService } from './services/data.service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,11 +42,12 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    HttpClientModule,
     StoreModule.forRoot({
       tutorial: reducer
     })
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
