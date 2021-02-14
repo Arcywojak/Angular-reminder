@@ -17,6 +17,7 @@ import { ContactStartComponent } from './pages/contact-start/contact-start.compo
 import { TutorialsPageComponent } from './pages/tutorials-page/tutorials-page.component';
 import { CreateTutorialComponent } from './pages/tutorials-page/components/create-tutorial/create-tutorial.component';
 import { ReadTutorialComponent } from './pages/tutorials-page/components/read-tutorial/read-tutorial.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ReadTutorialComponent } from './pages/tutorials-page/components/read-tu
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     StoreModule.forRoot({
       tutorial: reducer
     })
