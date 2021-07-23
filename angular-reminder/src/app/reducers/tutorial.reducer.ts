@@ -7,7 +7,7 @@ const initialState: Tutorial = {
     url: 'http://google.com'
 };
 
-export function reducer(state: Tutorial[] = [initialState], action: TutorialActions.Actions) {
+export function reducer(state: Tutorial[] = [initialState], action: TutorialActions.Actions): Tutorial[] {
 
     switch(action.type) {
         case TutorialActions.ADD_TUTORIAL:
@@ -16,8 +16,7 @@ export function reducer(state: Tutorial[] = [initialState], action: TutorialActi
             console.log(state)
             const newState = [...state.slice(0, action.payload), ...state.slice(action.payload + 1)];
             return newState;
-            
         default:
             return state;
-    };
-};
+    }
+}
